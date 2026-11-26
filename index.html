@@ -5,9 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Para ti ❤️</title>
+  <title>Mi Bautizo ❤️</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     * {
@@ -167,6 +169,123 @@
       transform: scale(1.1);
     }
 
+    /* MENSAJE ESPECIAL */
+
+    .mensaje {
+      background: #f8e9e3;
+      color: #80603d;
+      text-align: center;
+      padding: 35px 25px 20px;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
+    .texto-mensaje {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(17px, 4vw, 21px);
+      font-style: italic;
+      line-height: 1.9;
+      color: #80603d;
+    }
+
+    .mensaje-corazon {
+      color: #a87935;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    /* DETALLES DEL BAUTIZO */
+
+    .detalles {
+      background: #f8e9e3;
+      color: #49372b;
+      padding: 55px 22px;
+      text-align: center;
+    }
+
+    .subtitulo {
+      font-size: 11px;
+      letter-spacing: 5px;
+      color: #a18a7e;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .titulo-detalles {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(27px, 6vw, 36px);
+      font-weight: 400;
+      color: #80603d;
+      margin-bottom: 38px;
+    }
+
+    .detalle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 22px;
+      max-width: 440px;
+      margin: 0 auto 30px;
+      text-align: left;
+    }
+
+    .detalle-icono {
+      color: #a87935;
+      font-size: 31px;
+      width: 45px;
+      min-width: 45px;
+      text-align: center;
+    }
+
+    .detalle-texto {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(17px, 4vw, 21px);
+      line-height: 1.4;
+      color: #49372b;
+    }
+
+    .separador {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      max-width: 440px;
+      margin: 38px auto;
+      color: #a87935;
+    }
+
+    .separador::before,
+    .separador::after {
+      content: "";
+      height: 1px;
+      background: #a87935;
+      flex: 1;
+    }
+
+    .separador i {
+      font-size: 25px;
+    }
+
+    .recepcion-titulo {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(20px, 5vw, 25px);
+      line-height: 1.5;
+      color: #49372b;
+      margin-bottom: 30px;
+    }
+
+    .recepcion {
+      margin-bottom: 0;
+    }
+
+    .despedida {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 19px;
+      color: #a18a7e;
+      margin-top: 38px;
+    }
+
     /* CELULARES */
 
     @media screen and (max-width: 600px) {
@@ -174,9 +293,7 @@
       .portada {
         min-height: 75vh;
         min-height: 75svh;
-
         padding: 35px 15px;
-
         background-position: center center;
       }
 
@@ -206,6 +323,33 @@
         padding: 0 5px;
       }
 
+      .detalles {
+        padding: 45px 18px;
+      }
+
+      .titulo-detalles {
+        margin-bottom: 32px;
+      }
+
+      .detalle {
+        gap: 15px;
+        margin-bottom: 27px;
+      }
+
+      .detalle-icono {
+        font-size: 27px;
+        width: 38px;
+        min-width: 38px;
+      }
+
+      .detalle-texto {
+        font-size: 17px;
+      }
+
+      .recepcion-titulo {
+        font-size: 20px;
+      }
+
       .cancion {
         min-height: 270px;
         padding: 35px 15px;
@@ -226,6 +370,14 @@
         width: 65px;
         height: 65px;
         font-size: 24px;
+      }
+
+      .mensaje {
+        padding: 30px 22px 15px;
+      }
+
+      .texto-mensaje {
+        font-size: 17px;
       }
     }
 
@@ -250,6 +402,10 @@
         width: 145px;
         height: 145px;
       }
+
+      .detalle-texto {
+        font-size: 16px;
+      }
     }
 
     /* LAPTOP Y COMPUTADORAS */
@@ -260,6 +416,10 @@
         min-height: 85vh;
         min-height: 85svh;
         padding: 55px 30px;
+      }
+
+      .detalles {
+        padding: 70px 30px;
       }
 
       .cancion {
@@ -290,7 +450,7 @@
       <p class="pareja">Ailany Lizbeth</p>
 
       <p class="fecha">
-        Marzo 2026
+        Sábado 8 de abril de 2026
       </p>
 
     </div>
@@ -303,18 +463,128 @@
   <section class="cancion">
 
     <p class="titulo-cancion">
-      NUESTRA CANCIÓN
+      Dale play
     </p>
 
     <div class="reproductor">
 
-      <button class="boton-play" id="playBtn">
+      <button class="boton-play" id="playBtn" aria-label="Reproducir canción">
         ▶
       </button>
 
     </div>
 
-    <audio id="musica" src="nuestra-cancion.mp3"></audio>
+    <audio id="musica" src="musica/cancion 1.mp3"></audio>
+
+  </section>
+
+
+  <!-- MENSAJE ESPECIAL -->
+
+  <section class="mensaje">
+
+    <div class="mensaje-corazon">♡</div>
+
+    <p class="texto-mensaje">
+      Con mucha alegría en nuestros corazones,
+      queremos invitarte a compartir un día
+      muy especial en nuestras vidas.
+
+      <br><br>
+
+      Acompáñanos a celebrar el bautizo de
+      nuestra pequeña Ailany Lizbeth y a ser
+      parte de este momento lleno de amor,
+      fe y bendiciones.
+    </p>
+
+  </section>
+
+
+  <!-- DETALLES DEL BAUTIZO -->
+
+  <section class="detalles">
+
+    <p class="subtitulo"></p>
+
+    <h2 class="titulo-detalles">
+      Acompáñanos
+    </h2>
+
+    <!-- FECHA -->
+
+    <div class="detalle">
+
+      <div class="detalle-icono">
+        <i class="fa-regular fa-calendar-days"></i>
+      </div>
+
+      <div class="detalle-texto">
+        Sábado,<br>
+        8 de abril de 2026
+      </div>
+
+    </div>
+
+    <!-- HORA -->
+
+    <div class="detalle">
+
+      <div class="detalle-icono">
+        <i class="fa-regular fa-clock"></i>
+      </div>
+
+      <div class="detalle-texto">
+        A las 12:00 p. m.
+      </div>
+
+    </div>
+
+    <!-- IGLESIA -->
+
+    <div class="detalle">
+
+      <div class="detalle-icono">
+        <i class="fa-solid fa-church"></i>
+      </div>
+
+      <div class="detalle-texto">
+        Parroquia de<br>
+        San Bartolomé Apóstol<br>
+        Tepetitlán
+      </div>
+
+    </div>
+
+    <!-- SEPARADOR -->
+
+    <div class="separador">
+      <i class="fa-regular fa-heart"></i>
+    </div>
+
+    <!-- RECEPCIÓN -->
+
+    <h3 class="recepcion-titulo">
+      Posteriormente los esperamos<br>
+      en la recepción:
+    </h3>
+
+    <div class="detalle recepcion">
+
+      <div class="detalle-icono">
+        <i class="fa-solid fa-location-dot"></i>
+      </div>
+
+      <div class="detalle-texto">
+        Casa de mis abuelos<br>
+        Av. Francisco Villa s/n
+      </div>
+
+    </div>
+
+    <p class="despedida">
+      ¡Será un placer contar con tu presencia!
+    </p>
 
   </section>
 
